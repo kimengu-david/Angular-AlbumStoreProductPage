@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { ProductDescriptionComponent } from './product-description/product-description.component';
-
+import { ProductService } from './product.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { ProductDescriptionComponent } from './product-description/product-descr
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  //Array of providers- will make the ProductService available throughout the application.
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
